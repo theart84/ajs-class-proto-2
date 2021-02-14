@@ -53,3 +53,10 @@ test('Метод damage должен корректно изменять зна�
   testBowman.damage(50);
   expect(testBowman.health).toEqual(expectedHealth);
 });
+
+test('Метод damage должен устанавливать health в 0, если health стал отрицательным', () => {
+  const testBowman = new Bowman('Ibrahim', 'Bowman');
+  const expectedHealth = 0;
+  testBowman.damage(150);
+  expect(testBowman.health).toEqual(expectedHealth);
+});

@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest",
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
@@ -21,9 +22,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "npx eslint . --fix",
-      "npm run lint",
-      "npm run test"
+      "npm run lint:fix",
+      "npm run lint"
     ]
   },
   "author": "theart84",
